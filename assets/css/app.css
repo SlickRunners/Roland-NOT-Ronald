@@ -1,0 +1,32 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	position: absolute;
+	z-index: 1;
+}
+
+/*.flex {
+	display: flex;
+	flex-direction: center;
+	justify-content: center;
+	align-items: center;
+}
+*/
+#name {
+	color: white;
+	text-align: center;
+}
+
+#myCanvas {
+	position: absolute;
+	background: black;
+	height: 400px;
+	width: 100%;
+	margin: 0;
+}
