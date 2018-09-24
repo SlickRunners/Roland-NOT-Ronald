@@ -16,15 +16,17 @@ function onMouseMove(event) {
     center: event.middlePoint,
     radius: event.delta.length / 2
   });
-  circle.fillColor = 'yellow';
-  array.push(circle);
-  console.log(array);
+  var hueArray = ['#c33c54', '#254e70', '#37718e', '#8ee3eF', '#aeF3e7', '#B2374D', '#224766', '#6D97AC', '#8EE3EF', '#AEF3E7'];
+  for(var i = 0; i < hueArray.length; i++){
+    circle.fillColor = hueArray[i];
+    array.push(circle);
+  }
 }
 
 function onFrame(event){
   for(var i = 0; i < array.length; i++){
     array[i].fillColor.hue += 1;
-    array[i].scale(.99);
+    array[i].scale(.998);
     if(array[i].area < 1){
       array[i].remove();
       array.splice(i, 1);
@@ -32,33 +34,59 @@ function onFrame(event){
   }
 }
 
-// Create a point-text item at {x: 30, y: 30}:
+// Create a point-text item at {x: , y: }:
 var text = new PointText(new Point(view.center));
 text.fillColor = 'black';
 text.fontFamily = "Fugaz One";
 text.fontSize = "45";
 
 // Set the content of the text item:
-text.content = 'Hello world';
+//text.content = 'Roland Christensen, NOT Ronald';
 
-view.onResize = function(event) {
-    // Whenever the view is resized, move the path to its center:
-    text.position = view.center;
-}
 </script>
 </head>
 <body>
+  <section>
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12">
         <div class="hero-content">
-          <h1 class="text">Roland Mathew Christensen's Portfolio</h1>
+          <h1 id="name" class="text">Roland Mathew Christensen's Portfolio</h1>
           <a href="#" id="but" class="btn btn-primary btn-lg text">View Site</a>
         </div>
         <canvas id="myCanvas" resize="true">Canvas is not supported on your browser</canvas>
       </div>
      </div> 
   </div>
+  </section>
+
+  <section id="color-game">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12"> 
+
+      <h1 id="color-content">The Great <span id="goal">RGB</span> Color Game</h1>
+      <div id="stripe">
+        <button id="reset">New Colors</button>
+        <span id="message"></span>
+        <button class="mode">Easy</button>
+        <button class="mode selected">Hard</button>
+      </div>
+
+      <div id="container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
 
 
 
