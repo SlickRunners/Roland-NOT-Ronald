@@ -16,7 +16,6 @@ section {
 	position: relative;
 	margin: auto;
 	display: flex;
-	/*height: 100vh;*/
 }
 
 h1 {
@@ -119,7 +118,6 @@ button {
 
  .hero-content {
 	width: 600px;
-	padding: 200px 50%;
 	position: absolute;
 	align-items: center;
 	display: flex;
