@@ -9,6 +9,14 @@ canvas {
 	background: white;
 	display: flex;
 	height: 100vh;
+	text-align: center;
+}
+
+section {
+	position: relative;
+	margin: auto;
+	display: flex;
+	/*height: 100vh;*/
 }
 
 h1 {
@@ -16,8 +24,82 @@ h1 {
 	background: none;
 }
 
+li {
+	background: white;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+}
+
+li:nth-child(2n) {
+	background: #f7f7f7;
+}
+
+section:nth-child(2n) {
+	background: #494949;
+}
+
+li span {
+	background: #e74c3c;
+	height: 40px;
+	margin-right: 20px;
+	text-align: center;
+	color: white;
+	width: 0;
+	display: inline-block;
+	transition: 0.2s linear; 
+	opacity: 0;
+}
+
+li:hover span {
+	width: 40px;
+	opacity: 1.0;
+}
+
+input {
+	font-size: 18px;
+	background: #f7f7f7;
+	width: 100%;
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;
+	color: #2980b9;
+	border: 3px solid rgba(0,0,0,0);
+}
+
+input:focus {
+	background: white;
+	border: 3px solid #2980b9;
+	outline: "none";
+}
+
+button:hover {
+	color: white;
+	background: steelblue;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	border: none;
+	background: none;
+	text-transform: uppercase;
+	height: 100%;
+	font-weight: 700;
+	color: steelblue;
+	letter-spacing: 1px;
+	font-size: inherit;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	outline: none;
+}
+
 .col-body{
-	background: black;
+	padding: 20px 0;
 }
 
 .container-fluid {
@@ -25,22 +107,26 @@ h1 {
 	align-content: center;
 	text-align: center;
 	width: 100%;
+	vertical-align: middle;
 }
 
 .col-lg-12 {
 	padding: 0;
-	background: #232323;
+	background: white;
+	text-align: center;
+	margin: auto;
 }
 
  .hero-content {
-	width: 500px;
-	padding: 200px 0;
+	width: 600px;
+	padding: 200px 50%;
 	position: absolute;
-	text-align: center;
 	align-items: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin: auto;
+  	top: 0; left: 0; bottom: 0; right: 0;
 }
 
 .square {
@@ -55,11 +141,42 @@ h1 {
 	-moz-transition: background 0.6s;
 }
 
+.selected {
+	color: white;
+	background: steelblue;
+}
+
+.fa-plus {
+	float: right;
+	margin: auto;
+	padding: 10px 10px;
+}
+
+.completed {
+	color: gray;
+	text-decoration: line-through;
+}
+
+.btn {
+	background: black;
+	color: white;
+	border-color: black;
+}
+
+.btn:hover {
+	color: black;
+	background: white;
+	border-color: white;
+}
+
+#color-game a {
+	-webkit-transition: all 0.5s ease;
+}
+
 #color-content {
 	color: white;
 	text-decoration: bold;
-	text-align: center;
-	background: steelblue;
+	background: black;
 	margin: 0;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -82,40 +199,20 @@ h1 {
 }
 
 #stripe {
-	background: white;
 	height: 30px;
 	text-align: center;
-	text: black;
-
-	/*margin: 20px auto;*/
 }
 
-.selected {
-	color: white;
-	background: steelblue;
+#checks li:nth-of-type(2){
+	text-decoration: line-through;
 }
 
-button {
-	border: none;
-	font-family: "Montserat" ,"Avenir";
-	background: none;
-	text-transform: uppercase;
-	height: 100%;
-	font-weight: 700;
-	color: steelblue;
-	letter-spacing: 1px;
-	font-size: inherit;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
-	-moz-transition: all 0.4s;
-	outline: none;
-}
-
-button:hover {
-	color: white;
-	background: steelblue;
-}
-
-#color-game {
+#checks {
+	background: #f7f7f7;
+	box-shadow: 0 0 3px rgba(0,0,0,0.2);
+	width: 360px;
+	margin: 200px auto;
+	padding: 25px;
+	align-self: center;
 	position: relative;
 }

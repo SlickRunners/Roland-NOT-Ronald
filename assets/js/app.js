@@ -41,7 +41,7 @@ function setupSquares(){
 				resetButton.textContent = "Play Again?"
 				goalDisplay.textContent = goalColor;
 			} else {
-				this.style.backgroundColor = "#232323";
+				this.style.backgroundColor = "#ffffff";
 				messageDisplay.textContent = "Try again!";
 			}	
 		});
@@ -64,7 +64,6 @@ function resetGame(){
 			squares[i].style.display = "none";
 		}
 	}
-	// h1.style.background = "#232323";
 	messageDisplay.textContent = "";
 }
 
@@ -106,4 +105,31 @@ function randomColor(){
 	return "rgb(" + r + ", " + g + ", " + b + ")";
 }
 
-var name = $("#name");
+//strike through specific todos by clicking
+$("ul").on("click", "li", function(){
+	$(this).toggleClass("completed");
+});
+// click on X to delete todo
+$("ul").on("click", "span", function(event){
+	$(this).parent().fadeOut(500,function(){
+		$(this).remove();
+	});
+	event.stopPropagation();
+});
+
+$("input[type='text']").keypress(function(event){
+	if(event.which === 13){
+		var newToDo = $(this).val();
+		//create new li and add to ul
+		$("ul").append("<li><span><i class='fa fa-trash'> </i></span>" + " " + newToDo + "</li>")
+		$(this).val("");
+	}
+});
+
+$("#plus").on("click", function(){
+	$("input[type='text']").fadeToggle();
+});
+
+
+
+
