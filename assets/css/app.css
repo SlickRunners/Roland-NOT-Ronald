@@ -16,11 +16,8 @@ section {
 	position: relative;
 	margin: auto;
 	display: flex;
-}
-
-h1 {
-	color: black;
-	background: none;
+	height: 100vh;
+	text-align: center;
 }
 
 li {
@@ -34,8 +31,8 @@ li:nth-child(2n) {
 	background: #f7f7f7;
 }
 
-section:nth-child(2n) {
-	background: #494949;
+section:nth-child(odd) {
+	background: #F2F2EF;
 }
 
 li span {
@@ -61,19 +58,19 @@ input {
 	width: 100%;
 	padding: 13px 13px 13px 20px;
 	box-sizing: border-box;
-	color: #2980b9;
+	color: #A4243B;
 	border: 3px solid rgba(0,0,0,0);
 }
 
 input:focus {
 	background: white;
-	border: 3px solid #2980b9;
-	outline: "none";
+	border: 3px solid #A4243B;
+	outline: none;
 }
 
 button:hover {
 	color: white;
-	background: steelblue;
+	background: black;
 }
 
 ul {
@@ -88,7 +85,7 @@ button {
 	text-transform: uppercase;
 	height: 100%;
 	font-weight: 700;
-	color: steelblue;
+	color: #A4243B;
 	letter-spacing: 1px;
 	font-size: inherit;
 	transition: all 0.4s;
@@ -101,19 +98,13 @@ button {
 	padding: 20px 0;
 }
 
-.container-fluid {
+.container {
+	height: auto;
 	padding: 0;
 	align-content: center;
 	text-align: center;
 	width: 100%;
 	vertical-align: middle;
-}
-
-.col-lg-12 {
-	padding: 0;
-	background: white;
-	text-align: center;
-	margin: auto;
 }
 
  .hero-content {
@@ -125,6 +116,7 @@ button {
 	justify-content: center;
 	margin: auto;
   	top: 0; left: 0; bottom: 0; right: 0;
+  	color: #A4243B;
 }
 
 .square {
@@ -141,7 +133,7 @@ button {
 
 .selected {
 	color: white;
-	background: steelblue;
+	background: black;
 }
 
 .fa-plus {
@@ -156,25 +148,25 @@ button {
 }
 
 .btn {
-	background: black;
+	background: #A4243B;
 	color: white;
-	border-color: black;
+	border: solid 1px #A4243B;
+}
+
+nav.navbar {
+	color: #A4243B;
 }
 
 .btn:hover {
 	color: black;
 	background: white;
-	border-color: white;
-}
-
-#color-game a {
-	-webkit-transition: all 0.5s ease;
+	border: solid 1px #A4243B;
 }
 
 #color-content {
-	color: white;
+	color: #A4243B;
 	text-decoration: bold;
-	background: black;
+	border: 5px solid #A4243B;
 	margin: 0;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -189,6 +181,14 @@ button {
 #message {
 	display: inline-block;
 	width: 20%;
+}
+
+#run-title {
+	padding-top: 50px;
+}
+
+#runcoin {
+	text-align: center;
 }
 
 #container {
